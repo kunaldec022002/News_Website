@@ -1,0 +1,14 @@
+body{
+  background-color: #1f2120;
+}
+.news-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.text-center
+{
+  text-align: center;
+}
