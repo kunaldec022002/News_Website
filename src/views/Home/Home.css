@@ -12,3 +12,12 @@ body{
 {
   text-align: center;
 }
+
+.input-search{
+  display: block;
+  margin: 0px auto;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+  width: 500px;
+}
