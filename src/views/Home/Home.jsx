@@ -27,7 +27,7 @@ export default function Home() {
 
   useEffect(()=>{
     loadNews()
-  },)
+  },[searchQuery])
 
   return (
     <div>
