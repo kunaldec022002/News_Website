@@ -12,7 +12,7 @@ export default function Home() {
 
   const loadNews = async ()=>{
     try{
-      const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2025-02-28&to=2025-02-28&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+      const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2025-03-05&to=2025-03-05&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
 
       setNews(response.data.articles);
     }
@@ -23,10 +23,11 @@ export default function Home() {
 
   useEffect (()=>{
     loadNews()
-  },)
+  })
 
   useEffect(()=>{
     loadNews()
+    
   },[searchQuery])
 
   return (
