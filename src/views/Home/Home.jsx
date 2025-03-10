@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import NewsArticle from '../../component/NewsArticle/NewsArticle';
 import './Home.css'
+import Navbar from '../../component/Navbar/Navbar';
+
 
 
 export default function Home() {
@@ -12,9 +14,10 @@ export default function Home() {
 
   const loadNews = async ()=>{
     try{
-      const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2025-03-05&to=2025-03-05&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+      const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2025-03-09&to=2025-03-09&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
 
       setNews(response.data.articles);
+    
     }
     catch(error){
       console.log(error)
@@ -33,6 +36,9 @@ export default function Home() {
   return (
     <div>
       <div>
+
+        <Navbar/>
+        
         <input type='search' className='input-search' placeholder='Enter any news' onChange={(e)=>{
           setSearchQuery(e.target.value)
         }}/>
